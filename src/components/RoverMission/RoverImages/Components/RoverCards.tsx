@@ -1,9 +1,8 @@
 import React, {useEffect, useState, useCallback} from 'react';
-import {fetchMarsRoverImages} from "../services/MarsRover.service.tsx";
+import {fetchMarsRoverImages} from "../services/MarsRover.service.ts";
 import type {MarsRoverPhoto} from "../Interfaces/MarsRoverPhoto.ts";
-import {CircularProgress, Input, MenuItem, Select, Slider, TextField} from "@mui/material";
+import {CircularProgress, MenuItem, Select, Slider} from "@mui/material";
 import { debounce } from '@mui/material/utils';
-import {createTheme} from '@mui/material/styles';
 
 //Add rover cards props
 interface RoverCardsProps {

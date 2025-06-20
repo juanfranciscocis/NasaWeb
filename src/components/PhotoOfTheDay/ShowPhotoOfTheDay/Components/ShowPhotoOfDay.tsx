@@ -1,6 +1,5 @@
-// snippet for ShowPhotoOfDay component
 import React, {useState, useEffect} from 'react';
-import {fetchPhotoOfTheDay} from '../services/PhotoOfTheDay.service.tsx';
+import {fetchPhotoOfTheDay} from '../services/PhotoOfTheDay.service.ts';
 import type {PhotoOfTheDay} from "../Interfaces/PhotoOfTheDay.ts";
 import {CircularProgress} from "@mui/material";
 
@@ -25,7 +24,7 @@ const ShowPhotoOfDay: React.FC = () => {
         <div
             className="flex flex-col items-center justify-center min-h-[80vh] bg-gradient-to-br from-blue-900 via-black to-gray-900 p-6 rounded-xl shadow-2xl">
             {photoOfTheDay ? (
-                <div>
+                <div className="w-full max-w-2xl bg-white/10 backdrop-blur-md rounded-lg p-6 shadow-lg">
                     <h1 className="text-3xl font-bold text-white mb-2 text-center drop-shadow-lg">{photoOfTheDay.title}</h1>
                     <p className="text-gray-300 text-center mb-4">{photoOfTheDay.date}</p>
                     <div className="flex justify-center mb-6">
@@ -45,19 +44,14 @@ const ShowPhotoOfDay: React.FC = () => {
                             />
                         )}
                     </div>
-                    <div className={'flex flex row items-center justify-center mb-6'}>
-                    <div className={'max-w-2/3'}>
-                        <p className="text-gray-200 text-lg leading-relaxed text-justify drop-shadow-md">
-                            {photoOfTheDay.explanation}
-                        </p>
-                    </div>
-                </div>
+                    <p className="text-gray-200 text-lg leading-relaxed text-justify drop-shadow-md">
+                        {photoOfTheDay.explanation}
+                    </p>
                 </div>
             ) : (
                 <div className="flex flex-col items-center justify-center h-64">
-                    <CircularProgress
-                        style={{color: 'white'}}
-                    />
+                    <CircularProgress color="inherit" className="mb-4" />
+                    <span className="text-white">Loading NASA's Photo of the Day...</span>
                 </div>
             )}
         </div>

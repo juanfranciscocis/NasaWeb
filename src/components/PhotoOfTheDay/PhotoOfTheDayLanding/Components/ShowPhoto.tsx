@@ -1,7 +1,7 @@
 //React snippet for RoverMission component
 import React, {useState, useEffect} from 'react';
-import {fetchPhotoOfTheDay} from "../../PhotoOfTheDay/services/PhotoOfTheDay.service.tsx";
-import type {PhotoOfTheDay} from "../../PhotoOfTheDay/Interfaces/PhotoOfTheDay.ts";
+import {fetchPhotoOfTheDay} from "../../ShowPhotoOfTheDay/services/PhotoOfTheDay.service.ts";
+import type {PhotoOfTheDay} from "../../ShowPhotoOfTheDay/Interfaces/PhotoOfTheDay.ts";
 import {CircularProgress} from "@mui/material";
 import {FaAngleDoubleDown} from "react-icons/fa";
 
