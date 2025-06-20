@@ -24,7 +24,7 @@ const ShowPhotoOfDay: React.FC = () => {
         <div
             className="flex flex-col items-center justify-center min-h-[80vh] bg-gradient-to-br from-blue-900 via-black to-gray-900 p-6 rounded-xl shadow-2xl">
             {photoOfTheDay ? (
-                <div className="w-full max-w-2xl bg-white/10 backdrop-blur-md rounded-lg p-6 shadow-lg">
+                <div className="w-full max-w-2xl rounded-lg p-6 shadow-lg">
                     <h1 className="text-3xl font-bold text-white mb-2 text-center drop-shadow-lg">{photoOfTheDay.title}</h1>
                     <p className="text-gray-300 text-center mb-4">{photoOfTheDay.date}</p>
                     <div className="flex justify-center mb-6">

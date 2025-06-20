@@ -16,13 +16,29 @@ const Header: React.FC = () => {
                             className={'max-w-14'}
                         />
                         <h1 className={"LandingPageFont text-2xl"}>
-                            NASA Mars Rover Mission
+                            NASA Missions
                         </h1>
 
 
                 </a>
-                <div className={'w-1/2'}>
+                <div className="w-1/2">
+                    <nav className="flex items-center justify-end gap-6 pr-4">
+                        {[
+                            { href: "/MarsExperience", label: "Mars Experience" },
+                            { href: "/PhotoOfTheDay", label: "Photo of the Day" },
+                            { href: "/Earth", label: "3D Earth" },
+                        ].map((item) => (
+                            <a
+                                key={item.href}
+                                href={item.href}
+                                className="relative text-white/90 hover:text-white transition-colors duration-300 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                            >
+                                {item.label}
+                            </a>
+                        ))}
+                    </nav>
                 </div>
+
             </div>
         </header>
     );
