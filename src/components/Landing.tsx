@@ -1,8 +1,6 @@
 //give me a code snippet for a landing page in React with TypeScript
 import React from 'react';
 import { FaAngleDoubleDown } from "react-icons/fa";
-import NasaLogoMain from "../assets/NasaLogoMain.png";
-import {Image} from "astro:assets"; // Image is 1600x900
 
 const Landing: React.FC = () => {
     return (
