@@ -12,7 +12,7 @@ const Header: React.FC = () => {
 
 
                         <img
-                            src={'src/assets/NasaLogoMain.png'}
+                            src={'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png'}
                             className={'max-w-14'}
                         />
                         <h1 className={"LandingPageFont text-2xl"}>
