@@ -1,12 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.tsx'
-import RoverImages from '../components/RoverMission/RoverImages/RoverImages.astro';
+import PhotoDay from "../components/PhotoOfTheDay/PhotoOfTheDay/PhotoDay.astro";
 ---
 
 <Layout>
 	<Header/>
 	<div class="pt-32">
-		<RoverImages/>
+		<PhotoDay client:load />
 	</div>
 </Layout>

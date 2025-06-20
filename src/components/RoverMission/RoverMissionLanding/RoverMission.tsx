@@ -1,5 +1,6 @@
 //React snippet for RoverMission component
 import React, {useState, useEffect} from 'react';
+import {FaAngleDoubleDown} from "react-icons/fa";
 
 
 const RoverMission: React.FC = () => {
@@ -14,6 +15,9 @@ const RoverMission: React.FC = () => {
                     <h1 className="text-white text-xl opacity-100">Visit Experience</h1>
                 </a>
             </button>
+            <div className={'flex flex-col items-center justify-end mt-20'}>
+                <FaAngleDoubleDown className="text-4xl animate-bounce" />
+            </div>
         </div>
     );
 }

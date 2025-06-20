@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useCallback} from 'react';
-import {fetchMarsRoverImages} from "../services/marsRover.service.tsx";
-import type {MarsRoverPhoto} from "../../Interfaces/MarsRoverPhoto.ts";
+import {fetchMarsRoverImages} from "../services/MarsRover.service.tsx";
+import type {MarsRoverPhoto} from "../Interfaces/MarsRoverPhoto.ts";
 import {CircularProgress, Input, MenuItem, Select, Slider, TextField} from "@mui/material";
 import { debounce } from '@mui/material/utils';
 import {createTheme} from '@mui/material/styles';

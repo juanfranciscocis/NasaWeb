@@ -2,8 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import Landing from '../components/Landing.tsx';
 import Header from '../components/Header.tsx';
-import RoverMission from '../components/RoverMission.tsx';
-import RoverImages from '../components/RoverImages/RoverImages.astro';
+import RoverMission from '../components/RoverMission/RoverMissionLanding/RoverMission.tsx';
+import RoverImages from '../components/RoverMission/RoverImages/RoverImages.astro';
+import PhotoOfTheDayLanding from "../components/PhotoOfTheDay/PhotoOfTheDayLanding/PhotoOfTheDayLanding.astro";
 
 ---
 
@@ -11,5 +12,6 @@ import RoverImages from '../components/RoverImages/RoverImages.astro';
     <Header/>
     <Landing/>
     <RoverMission/>
+    <PhotoOfTheDayLanding/>
 
 </Layout>
