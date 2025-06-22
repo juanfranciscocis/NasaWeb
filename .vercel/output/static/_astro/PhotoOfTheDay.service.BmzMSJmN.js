@@ -1,1 +1,0 @@
-import{a as t}from"./CircularProgress.DywdrMbT.js";const a=async()=>{const r="http://localhost:3000/picture_of_day";try{return(await t.post(r)).data}catch(o){throw console.error("Error fetching Mars Rover images:",o),o}};export{a as f};
