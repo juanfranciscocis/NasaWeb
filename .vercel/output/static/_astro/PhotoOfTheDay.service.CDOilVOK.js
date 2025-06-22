@@ -1,1 +1,0 @@
-import{x as o}from"./CircularProgress.GuQiJUgJ.js";const a=async()=>{const e="https://nasa-api-seven-sage.vercel.app/picture_of_day";try{return(await o.post(e)).data}catch(r){throw console.error("Error fetching Mars Rover images:",r),r}};export{a as f};
