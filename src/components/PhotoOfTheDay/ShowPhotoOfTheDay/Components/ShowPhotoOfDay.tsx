@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {fetchPhotoOfTheDay} from '../services/PhotoOfTheDay.service.ts';
+import {fetchPhotoOfTheDay} from '../Services/PhotoOfTheDay.service.ts';
 import type {PhotoOfTheDay} from "../Interfaces/PhotoOfTheDay.ts";
 import {CircularProgress} from "@mui/material";
 

@@ -27,6 +27,7 @@ const Header: React.FC = () => {
                             { href: "/MarsExperience", label: "Mars Experience" },
                             { href: "/PhotoOfTheDay", label: "Photo of the Day" },
                             { href: "/Earth", label: "3D Earth" },
+                            {href: "/NasaImagesExperience", label: "NASA Images Experience" },
                         ].map((item) => (
                             <a
                                 key={item.href}

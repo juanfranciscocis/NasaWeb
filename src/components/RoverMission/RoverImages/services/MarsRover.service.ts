@@ -1,5 +1,6 @@
 import axios from 'axios';
-import type {MarsRoverParams, MarsRoverPhoto} from "../Interfaces/MarsRoverPhoto.ts";
+import type {MarsRoverPhoto} from "../Interfaces/MarsRoverPhoto.ts";
+import type {MarsRoverParams} from "../Interfaces/MarsRoverParams.ts";
 
 export const fetchMarsRoverImages = async (params: MarsRoverParams = {}): Promise<MarsRoverPhoto[]> => {
     const rover = params.rover || 'curiosity';
