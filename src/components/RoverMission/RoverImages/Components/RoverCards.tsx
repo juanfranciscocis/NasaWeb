@@ -51,10 +51,13 @@ const RoverCards: React.FC<RoverCardsProps> = (props) => {
     return (
         <>
             <div
-                className={'flex flex-row items-center justify-center mb-4 min-w-full bg-gray-800/50 backdrop-blur-md shadow-lg p-4 rounded-2xl'}>
-                <div className="flex flex-row gap-10">
-                    <div className="flex items-center">
-                        <span className="text-white mr-3 font-medium">Select Camera:</span>
+                className={'flex flex-col lg:flex-row items-center justify-center mb-4 min-w-full bg-gray-800/50 backdrop-blur-md shadow-lg p-3 sm:p-4 lg:p-6 rounded-2xl'}>
+                <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-10 w-full lg:w-auto">
+                    {/* Camera Selection */}
+                    <div className="flex flex-col sm:flex-row sm:items-center w-full lg:w-auto">
+            <span className="text-white mb-2 sm:mb-0 sm:mr-3 font-medium text-sm sm:text-base whitespace-nowrap">
+                Select Camera:
+            </span>
                         <Select
                             id="camera-select"
                             variant="outlined"
@@ -62,7 +65,7 @@ const RoverCards: React.FC<RoverCardsProps> = (props) => {
                             onChange={(e) => setSelectedCamera(e.target.value as string)}
                             sx={{
                                 color: 'white',
-                                minWidth: 180,
+                                minWidth: { xs: '100%', sm: 160, md: 180 },
                                 '& .MuiOutlinedInput-notchedOutline': {
                                     borderColor: 'white',
                                 },
@@ -91,12 +94,16 @@ const RoverCards: React.FC<RoverCardsProps> = (props) => {
                             <MenuItem value="MINITES">MINITES</MenuItem>
                         </Select>
                     </div>
-                    <div className="flex flex-col">
-                        <div className="flex items-center">
-                            <span className="text-white mr-3 font-medium">Martian sol of the Rover's mission</span>
+
+                    {/* Sol Slider */}
+                    <div className="flex flex-col w-full lg:w-auto">
+                        <div className="flex items-center mb-2">
+                <span className="text-white font-medium text-sm sm:text-base text-center sm:text-left w-full">
+                    Martian sol of the Rover's mission
+                </span>
                         </div>
-                        <div className="w-80">
-                           <Slider
+                        <div className="w-full sm:w-72 md:w-80 lg:w-80">
+                            <Slider
                                 value={displaySol}
                                 onChange={(_, value) => {
                                     const newValue = value as number;
